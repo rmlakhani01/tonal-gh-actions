@@ -1,4 +1,4 @@
-const sum = require('./../src/FileCabinet/SuiteScripts/test.js')
+const sum = require('../FileCabinet/SuiteScripts/test')
 
 it('should assert strings are equal', () => {
   const a = 'foobar'
