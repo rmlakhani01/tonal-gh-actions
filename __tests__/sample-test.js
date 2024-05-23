@@ -1,4 +1,4 @@
-const sum = require('../FileCabinet/SuiteScripts/test')
+const sum = require('../FileCabinet/SuiteScripts/sum')
 
 it('should assert strings are equal', () => {
   const a = 'foobar'
@@ -9,6 +9,6 @@ it('should assert strings are equal', () => {
   //   expect(true).toBeFalsy()
 })
 
-test('adds 1 + 2 to equal 3', () => {
+it('adds 1 + 2 to equal 3', () => {
   expect(sum(1, 2)).toBe(3)
 })
