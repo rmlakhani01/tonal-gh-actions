@@ -4,7 +4,10 @@ on: [push]
 jobs:
   sdf-validate:
     runs-on: ubuntu-latest
+    environment: sandbox
     steps:
+      - name: Authenticate project against ${{ vars.NS_ACCOUNT_ID }}
+        run: ./node_modules/.bin/suitecloud account:savetoken --account ${{ vars.NS_ACCOUNT_ID}} --authid ${{ vars.NS_ACCOUNT_ID }} --tokenid ${{ secrets.NS_TOKEN_ID }} --tokensecret ${{ secrets.NS_TOKEN_SECRET }}
       - name: Check out repository code
         uses: actions/checkout@v3
       - name: Install node
